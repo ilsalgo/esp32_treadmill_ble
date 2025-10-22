@@ -4,8 +4,8 @@
 #include <BLE2902.h>
 
 // Pin configuration
-#define IR_SENSOR_PIN 32
-#define NOMINAL_DISTANCE 1.5  // meters between marks
+#define IR_SENSOR_PIN 15
+#define NOMINAL_DISTANCE 1.3  // meters between marks
 #define LED_PIN 2
 
 // FINE CALIBRATION - MODIFY THIS VALUE
