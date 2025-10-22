@@ -47,13 +47,13 @@ struct RSCMeasurement {
 class MyServerCallbacks: public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
         deviceConnected = true;
-        Serial.println("*** Garmin CONNECTED ***");
+        Serial.println("*** Device CONNECTED ***");
         digitalWrite(LED_PIN, HIGH);
     };
 
     void onDisconnect(BLEServer* pServer) {
         deviceConnected = false;
-        Serial.println("*** Garmin DISCONNECTED ***");
+        Serial.println("*** Device DISCONNECTED ***");
         digitalWrite(LED_PIN, LOW);
         delay(500);
         BLEDevice::startAdvertising();
@@ -165,7 +165,7 @@ void updateFilteredSpeed() {
 
 // BLE Footpod configuration
 void setupBLEFootpod() {
-    BLEDevice::init("Garmin_Footpod");
+    BLEDevice::init("esp32_Footpod");
     
     pServer = BLEDevice::createServer();
     pServer->setCallbacks(new MyServerCallbacks());
@@ -200,7 +200,7 @@ void setupBLEFootpod() {
     Serial.println("BLE Footpod ready");
 }
 
-// Send running data to Garmin
+// Send running data to device
 void sendRunningData() {
     if (!deviceConnected) return;
     
