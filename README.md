@@ -1,4 +1,4 @@
-# esp32_treadmill
+# esp32_treadmill_ble
 Send treadmill data without Bluetooth to Garmin devices an other
 
 
