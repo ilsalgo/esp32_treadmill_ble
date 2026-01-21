@@ -1,3 +1,10 @@
+# Test Version
+I changed some parameters to make the reading more precise by also inserting a calibration factor of verse based on the speeds to set it correctly in each phase
+
+
+
+
+
 # esp32_treadmill_ble
 Send treadmill data without Bluetooth to Garmin devices and other
 
